@@ -1,0 +1,12 @@
+{
+  "name": "9b-typescript-lecture",
+  "version": "1.0.0",
+  "description": "starts in part 9b of FS open",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-node": "ts-node"
+  },
+  "author": "Oheneba Poku-Marboah",
+  "license": "ISC"
+}
