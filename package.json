@@ -9,13 +9,16 @@
     "multiply": "ts-node multiplier.ts",
     "calculate": "ts-node calculator.ts",
     "dev": "ts-node-dev index.ts",
-    "start": "ts-node index.ts"
-
+    "start": "ts-node index.ts",
+    "lint": "eslint --ext .ts ."
   },
   "author": "Oheneba Poku-Marboah",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^16.7.10",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "eslint": "^7.32.0",
     "ts-node-dev": "^1.1.8"
   },
   "dependencies": {
