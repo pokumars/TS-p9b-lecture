@@ -11,22 +11,28 @@ const parseArguments = (args: Array<string>): MultiplyValues => {
     return {
       value1: Number(args[2]),
       value2: Number(args[3])
-    }
+    };
   } else {
     throw new Error("Provided values were not numbers!");
   }
-}
+};
 
 const multiplicator = (a: number, b: number, printText: string) => {
   console.log(printText, a * b);
-}
+};
 
 try {
   const { value1, value2 } = parseArguments(process.argv);
 
   multiplicator(value1, value2, `Multiplied ${value1} and ${value2}, the result is:`);
 } catch (e) {
-  console.log('Error, something bad happened, message: ', e.message);
+  const errorMessage = 'Error, something bad happened, message: ';
+  if (e instanceof Error) {
+    //Read this to understand whywe need the if clause
+    //https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-0.html#unknown-on-catch-clause-bindings
+    //https://stackoverflow.com/questions/60151181/object-is-of-type-unknown-typescript-generics
+    console.log(errorMessage, e.message);
+  }
 }
 
 
